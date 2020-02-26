@@ -6,9 +6,19 @@ import closeSvg from "../../assets/img/close.svg";
 
 import "./AddList.scss";
 
-const AddList = ({ colors }) => {
+const AddList = ({ colors, onAdd }) => {
   const [isVisiblePopup, setVisiblePopup] = useState(false);
   const [selectedColor, selectColor] = useState(colors[0].id);
+  const [inputValue, setInputValue] = useState("");
+
+  const addNewCategory = () => {
+    if (!inputValue) {
+      alert("Add category name");
+      return;
+    }
+
+    onAdd({ id: Math.random(), name: inputValue, colorId: selectedColor });
+  };
 
   return (
     <div className="add-list">
@@ -48,12 +58,20 @@ const AddList = ({ colors }) => {
       {isVisiblePopup && (
         <div className="add-list__popup">
           <img
-          onClick={() => setVisiblePopup(false)}
+            onClick={() => setVisiblePopup(false)}
             src={closeSvg}
             alt="Close Popup"
             className="add-list__popup-close-btn"
           ></img>
-          <input type="text" className="field" placeholder="Category name" />
+
+          <input
+            value={inputValue}
+            onChange={e => setInputValue(e.target.value)}
+            type="text"
+            className="field"
+            placeholder="Category name"
+          />
+
           <div className="add-list__popup-colors">
             {colors.map(color => (
               <Badge
@@ -64,7 +82,10 @@ const AddList = ({ colors }) => {
               />
             ))}
           </div>
-          <button className="button">Add category</button>
+
+          <button onClick={addNewCategory} className="button">
+            Add category
+          </button>
         </div>
       )}
     </div>
