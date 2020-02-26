@@ -17,7 +17,9 @@ const AddList = ({ colors, onAdd }) => {
       return;
     }
 
-    onAdd({ id: Math.random(), name: inputValue, colorId: selectedColor });
+    const color = colors.filter(c => c.id === selectedColor)[0].name;
+
+    onAdd({ id: Math.random(), name: inputValue, color: color });
   };
 
   return (
