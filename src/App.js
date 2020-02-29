@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import List from "./components/List";
 import AddList from "./components/AddList";
+import Tasks from "./components/Tasks";
 
 import DB from "./assets/db.json";
 
@@ -43,12 +44,20 @@ function App() {
           ]}
         />
 
-        <List items={lists} isRemovable={true} />
+        <List
+          items={lists}
+          onRemove={() => {
+            alert(1);
+          }}
+          isRemovable
+        />
 
         <AddList onAdd={onAddNewCategory} colors={DB.colors} />
       </div>
 
-      <div className="todo_tasks"></div>
+      <div className="todo__tasks">
+        <Tasks />
+      </div>
     </div>
   );
 }
