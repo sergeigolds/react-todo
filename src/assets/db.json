@@ -7,7 +7,7 @@
     },
     {
       "id": 2,
-      "name": "Frontend",
+      "name": "Frontend1",
       "colorId": 4
     },
     {
@@ -24,16 +24,6 @@
       "id": 5,
       "name": "Rest API",
       "colorId": 1
-    },
-    {
-      "name": "dsfdsf",
-      "colorId": 4,
-      "id": 6
-    },
-    {
-      "name": "dsfdsfds",
-      "colorId": 7,
-      "id": 7
     }
   ],
   "tasks": [

@@ -8,6 +8,7 @@ import listSvg from "./assets/img/list.svg";
 function App() {
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
   useEffect(() => {
     axios
@@ -25,6 +26,16 @@ function App() {
     setLists(NewList);
   };
 
+  const onEditListTitle = (id, title) => {
+    const NewList = lists.map(item => {
+      if (item.id === id) {
+        item.name = title;
+      }
+      return item;
+    });
+    setLists(NewList);
+  };
+
   return (
     <div className="todo">
       <div className="todo__sidebar">
@@ -32,10 +43,12 @@ function App() {
           items={[
             {
               icon: <img src={listSvg} alt="Menu icon"></img>,
-              name: "All categories"
+              name: "All categories",
+              active: true
             }
           ]}
         />
+
         {lists ? (
           <List
             items={lists}
@@ -43,6 +56,10 @@ function App() {
               const newLists = lists.filter(item => item.id !== id);
               setLists(newLists);
             }}
+            onClickItem={item => {
+              setActiveItem(item);
+            }}
+            activeItem={activeItem}
             isRemovable
           />
         ) : (
@@ -50,7 +67,11 @@ function App() {
         )}
         <AddList onAdd={onAddNewCategory} colors={colors} />
       </div>
-      <div className="todo__tasks">{lists && <Tasks list={lists[1]} />}</div>
+      <div className="todo__tasks">
+        {lists && activeItem && (
+          <Tasks list={activeItem} onEditTitle={onEditListTitle} />
+        )}
+      </div>
     </div>
   );
 }
