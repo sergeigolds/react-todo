@@ -44,6 +44,9 @@ const AddList = ({ colors, onAdd }) => {
         onAdd(listObj);
         onClosePopup();
       })
+      .catch(() => {
+        alert("Loading error!");
+      })
       .finally(() => {
         setIsLoading(false);
       });
@@ -87,7 +90,7 @@ const AddList = ({ colors, onAdd }) => {
       {isVisiblePopup && (
         <div className="add-list__popup">
           <img
-            onClick={onClosePopup} // Fix Here
+            onClick={onClosePopup}
             src={closeSvg}
             alt="Close Popup"
             className="add-list__popup-close-btn"
@@ -113,7 +116,7 @@ const AddList = ({ colors, onAdd }) => {
           </div>
 
           <button onClick={addNewCategory} className="button">
-            {isLoading ? "Add in progress..." : "Add new category"}
+            {isLoading ? "Loading..." : "Add new category"}
           </button>
         </div>
       )}

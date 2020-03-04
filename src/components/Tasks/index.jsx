@@ -1,11 +1,13 @@
 import React from "react";
 import axios from "axios";
 
+import AddTaskForm from "./AddTaskForm";
+
 import editSvg from "../../assets/img/edit.svg";
 
 import "./Tasks.scss";
 
-const Tasks = ({ list, onEditTitle }) => {
+const Tasks = ({ list, onEditTitle, onAddTask }) => {
   const editTitle = () => {
     const newTitle = window.prompt("Add new title", list.name);
     if (newTitle) {
@@ -28,7 +30,6 @@ const Tasks = ({ list, onEditTitle }) => {
       </h2>
 
       <div className="tasks__items">
-        {!list.tasks.length && <h2>Tasks list is empty</h2>}
         {list.tasks.map(task => (
           <div key={task.id} className="tasks__items-row">
             <div className="checkbox">
@@ -54,6 +55,7 @@ const Tasks = ({ list, onEditTitle }) => {
             <input readOnly value={task.text} />
           </div>
         ))}
+        <AddTaskForm list={list} onAddTask={onAddTask} />
       </div>
     </div>
   );

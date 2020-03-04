@@ -28,6 +28,14 @@
     height: calc(100% - 120px);
     border-right: 1px solid #f1f1f1;
     padding: 60px 20px;
+
+    .list {
+      li.active {
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
   }
 
   &__tasks {
@@ -43,6 +51,7 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
 
   &:hover {
     background: darken($color: #4dd599, $amount: 6%);
@@ -50,6 +59,23 @@
 
   &:active {
     background: darken($color: #4dd599, $amount: 10%);
+  }
+
+  &:disabled {
+    background-color: #d8d8d8;
+  }
+
+  &--grey {
+    background-color: #f4f6f8;
+    color: #444;
+
+    &:hover {
+      background-color: darken($color: #f4f6f8, $amount: 3%);
+    }
+
+    &:active {
+      background-color: darken($color: #f4f6f8, $amount: 6%);
+    }
   }
 }
 
@@ -60,6 +86,7 @@
   border-radius: 4px;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 
   &:focus,
   &:hover {
