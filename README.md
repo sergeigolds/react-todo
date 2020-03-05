@@ -1,6 +1,7 @@
 TODO:
 
-1. Responsive
-2. Error alerts
-3. Backend
-4. Deploy
+1. Update todo
+2. Responsive
+3. Error alerts
+4. Backend
+5. Deploy
