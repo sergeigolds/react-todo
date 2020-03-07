@@ -31,7 +31,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
         onAddTask(list.id, data);
         toggleFormVisible();
       })
-      .catch(() => {
+      .catch(e => {
         alert("Loading error!");
       })
       .finally(() => {

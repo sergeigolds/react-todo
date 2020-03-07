@@ -3,13 +3,17 @@
     margin-bottom: 40px;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   &__title {
     font-family: Montserrat;
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
     color: #64c4ed;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #f2f2f2;
 
     &:hover {
@@ -44,11 +48,10 @@
       align-items: center;
       cursor: pointer;
       opacity: 0.4;
-      transition: none;
+      transition: opacity 0.15s ease-in-out;
 
       &:hover {
         opacity: 0.8;
-        transition: opacity 0.15s ease-in-out;
       }
 
       img {
@@ -67,12 +70,57 @@
   &__items {
     margin-top: 30px;
 
+    h2 {
+      font-family: Montserrat;
+      font-weight: bold;
+      font-size: 22px;
+      color: #c9d1d3;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+
     &-row {
       display: flex;
       align-items: center;
       margin-bottom: 15px;
 
-      input {
+      &:hover &-actions {
+        opacity: 1;
+      }
+
+      &-actions {
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background-color: lighten(#f4f6f8, 2%);
+          border-radius: 6px;
+          margin-left: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#f4f6f8, 2%);
+            svg {
+              opacity: 0.9;
+            }
+          }
+
+          svg {
+            width: 11px;
+            height: 11px;
+            opacity: 0.4;
+          }
+        }
+      }
+
+      p {
         margin-left: 15px;
         border: 0;
         font-size: 16px;
@@ -82,23 +130,12 @@
   }
 
   .checkbox {
-    &:hover {
-      label {
-        background-color: #f2f2f2;
-        border-color: #f2f2f2;
-        svg {
-          opacity: 1;
-          path {
-            stroke: #b2b2b2;
-          }
-        }
-      }
-    }
     input {
       display: none;
     }
 
     svg {
+      transition: opacity 0.15s ease-in-out;
       path {
         stroke: #f2f2f2;
       }
@@ -116,6 +153,19 @@
       }
     }
 
+    &:hover {
+      label {
+        background-color: #f2f2f2;
+        border-color: #f2f2f2;
+        svg {
+          opacity: 1;
+          path {
+            stroke: #b2b2b2;
+          }
+        }
+      }
+    }
+
     label {
       display: flex;
       align-items: center;
@@ -125,10 +175,12 @@
       width: 20px;
       height: 20px;
       cursor: pointer;
-    }
+      transition: background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
 
-    svg {
-      opacity: 0;
+      svg {
+        opacity: 0;
+      }
     }
   }
 }

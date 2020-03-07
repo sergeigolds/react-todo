@@ -2,12 +2,12 @@
   "lists": [
     {
       "id": 1,
-      "name": "React",
+      "name": "General",
       "colorId": 5
     },
     {
       "id": 2,
-      "name": "Frontend",
+      "name": "React",
       "colorId": 4
     },
     {
@@ -19,133 +19,128 @@
       "id": 4,
       "name": "Django",
       "colorId": 2
-    },
-    {
-      "id": 5,
-      "name": "Rest API",
-      "colorId": 1
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "listId": 2,
-      "text": "Complete JavaScript",
-      "completed": true
-    },
-    {
-      "id": 2,
-      "listId": 2,
-      "text": "Patterns of Enterprise Application Architecture",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect)",
-      "completed": true
-    },
-    {
-      "id": 4,
-      "listId": 2,
-      "text": "Redux (redux-observable, redux-saga)",
-      "completed": false
-    },
-    {
-      "listId": 2,
-      "text": "123",
+      "listId": 1,
+      "text": "Learn GIT",
       "completed": true,
-      "id": 5
+      "id": 23
     },
     {
       "listId": 1,
-      "text": "test",
-      "completed": false,
-      "id": 6
-    },
-    {
-      "listId": 1,
-      "text": "qweqwe",
-      "completed": false,
-      "id": 7
-    },
-    {
-      "listId": 1,
-      "text": "qweqwe",
+      "text": "Know HTTP(S) protocol",
       "completed": true,
-      "id": 8
+      "id": 24
     },
     {
       "listId": 1,
-      "text": "123",
-      "completed": false,
-      "id": 9
-    },
-    {
-      "listId": 2,
-      "text": "222",
+      "text": "Learn the terminal",
       "completed": true,
-      "id": 12
+      "id": 25
+    },
+    {
+      "listId": 1,
+      "text": "Algorithms",
+      "completed": true,
+      "id": 26
+    },
+    {
+      "listId": 1,
+      "text": "Design Patterns",
+      "completed": true,
+      "id": 27
     },
     {
       "listId": 2,
-      "text": "fsdfdsfds",
+      "text": "Learn Build Tools",
       "completed": false,
-      "id": 13
-    },
-    {
-      "listId": 4,
-      "text": "test",
-      "completed": false,
-      "id": 14
-    },
-    {
-      "listId": 4,
-      "text": "testttt",
-      "completed": false,
-      "id": 15
-    },
-    {
-      "listId": 4,
-      "text": "3214323324324",
-      "completed": false,
-      "id": 16
+      "id": 28
     },
     {
       "listId": 2,
-      "text": "",
+      "text": "Styling",
+      "completed": true,
+      "id": 29
+    },
+    {
+      "listId": 2,
+      "text": "State Management",
       "completed": false,
-      "id": 17
+      "id": 30
+    },
+    {
+      "listId": 2,
+      "text": "Type Checkers",
+      "completed": true,
+      "id": 31
+    },
+    {
+      "listId": 2,
+      "text": "Form Helpers",
+      "completed": true,
+      "id": 32
+    },
+    {
+      "listId": 2,
+      "text": "Routing",
+      "completed": false,
+      "id": 33
+    },
+    {
+      "listId": 2,
+      "text": "API Clients",
+      "completed": false,
+      "id": 34
     },
     {
       "listId": 3,
-      "text": "",
+      "text": "Handle Error And Exceptions",
       "completed": false,
-      "id": 18
+      "id": 35
     },
     {
       "listId": 3,
-      "text": "",
-      "completed": false,
-      "id": 19
+      "text": "CRUD Functionality",
+      "completed": true,
+      "id": 36
     },
     {
       "listId": 3,
-      "text": "",
-      "completed": false,
-      "id": 20
+      "text": "Learn about MVT",
+      "completed": true,
+      "id": 37
     },
     {
-      "listId": 5,
-      "text": "f",
+      "listId": 3,
+      "text": "Clean And Proper Python Code",
       "completed": false,
-      "id": 21
+      "id": 38
     },
     {
-      "listId": 5,
-      "text": "321321",
+      "listId": 4,
+      "text": "Learn REST APIs and JSON",
       "completed": false,
-      "id": 22
+      "id": 39
+    },
+    {
+      "listId": 4,
+      "text": "Database Management and SQL",
+      "completed": true,
+      "id": 40
+    },
+    {
+      "listId": 4,
+      "text": "Regular Expression",
+      "completed": true,
+      "id": 41
+    },
+    {
+      "listId": 4,
+      "text": "String manipulation operations",
+      "completed": false,
+      "id": 42
     }
   ],
   "colors": [
