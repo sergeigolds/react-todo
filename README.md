@@ -1,3 +1,5 @@
+ReactJs Todo App alpha version
+
 TODO:
 
 1. Bugfix (
